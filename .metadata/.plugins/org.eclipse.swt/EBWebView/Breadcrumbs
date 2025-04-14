@@ -1,0 +1,31 @@
+0:12:11 Tab5 FinishNav26
+0:12:11 Tab5 PageLoad
+0:12:37 Tab5 StartNav27 #typed
+0:12:37 Tab5 FinishNav27
+0:12:37 Tab5 PageLoad
+0:12:40 Tab5 StartNav28 #typed
+0:12:40 Tab5 FinishNav28
+0:12:40 Tab5 PageLoad
+0:12:42 Tab5 StartNav29 #typed
+0:12:42 Tab5 FinishNav29
+0:12:42 Tab5 PageLoad
+0:12:51 Tab5 StartNav30 #typed
+0:12:51 Tab5 FinishNav30
+0:12:51 Tab5 PageLoad
+0:12:54 Tab5 StartNav31 #typed
+0:12:54 Tab5 FinishNav31
+0:12:54 Tab5 PageLoad
+0:13:00 Microsoft.Shutdown.OnWindowClosing
+0:13:00 Microsoft.Shutdown.OnWindowClosing_MaybeClearBrowsingDataOnExit
+0:13:00 Microsoft.Shutdown.OnWindowClosing_ClearBrowsingDataOnExitNotInProgress
+0:13:00 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:13:00 Tab5 RenderProcessGone
+0:13:00 Browser5 Close Tab5 at 0
+0:13:00 Tab5 WebContentsDestroyed
+0:13:00 Microsoft.Shutdown.OnWindowClosing
+0:13:00 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:13:00 Widget Closed: BrowserFrame
+0:13:00 Microsoft.Shutdown.OnWindowClosing
+0:13:00 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:13:00 Microsoft.Browser_Removed
+24:04:52 Microsoft.Shutdown.OnWindowClosing

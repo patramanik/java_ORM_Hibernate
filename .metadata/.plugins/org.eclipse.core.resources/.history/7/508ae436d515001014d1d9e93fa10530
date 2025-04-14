@@ -1,0 +1,27 @@
+package com.demo.entity.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.entity.Product;
+
+public class ProductDaoImpl implements ProductDao{
+
+	@Override
+	public void insertProduct(Product p) {
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s =sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		
+		
+		t.commit();
+		s.close();
+		
+	}
+
+}

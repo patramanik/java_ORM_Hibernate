@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+D:\javaORM\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1827529215.index
+\HD19
+D:\javaORM\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\874686004.index
+\eStore\src\main\resources
+D:\javaORM\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3890067520.index
+\HD20\src\main\resources
