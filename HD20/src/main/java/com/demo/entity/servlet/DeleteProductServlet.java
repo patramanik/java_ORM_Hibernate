@@ -23,6 +23,7 @@ public class DeleteProductServlet extends HttpServlet {
 		
 		pimpl.deleteProduct(id);
 		
+		resp.sendRedirect("DisplayAllServlet");
 		
 	}
 

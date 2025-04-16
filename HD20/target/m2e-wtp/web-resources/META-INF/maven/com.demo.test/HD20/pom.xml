@@ -7,16 +7,27 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>HD20 Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <properties>
+  <!--<properties>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
+    <jakarta.servlet.version>5.0.0</jakarta.servlet.version>
 
-</properties>
+</properties>-->
 
   <dependencies>
   
+<!--  <dependency>
+
+<groupId>org.hibernate</groupId>
+
+<artifactId>hibernate-core</artifactId>
+
+<version>6.4.4.Final</version>
+
+</dependency>-->
+
+ 
    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 	<dependency>
 	    <groupId>org.hibernate</groupId>
@@ -31,10 +42,16 @@
 	    <version>8.0.33</version>
 	</dependency>
   
+	<!--<dependency>
+	    <groupId>com.mysql</groupId>
+	    <artifactId>mysql-connector-j</artifactId>
+	    <version>8.3.0</version>   
+	</dependency>
+	  -->
 	<dependency>
 	    <groupId>jakarta.servlet</groupId>
 	    <artifactId>jakarta.servlet-api</artifactId>
-	    <version>6.0.0</version>
+	    <version>5.0.0</version>
 	    <scope>provided</scope>
 	</dependency>
 

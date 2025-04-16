@@ -34,10 +34,17 @@ public class EditProductServlet extends HttpServlet {
     	
     	pimpl.editProduct(p);
     	
+    	System.out.println("Product Updated");
     	resp.sendRedirect("DisplayAllServlet");
     	
     	
     	
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doPost(req, resp);
 	}
 
 }

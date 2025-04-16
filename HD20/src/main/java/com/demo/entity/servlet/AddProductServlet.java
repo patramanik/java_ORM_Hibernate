@@ -34,5 +34,7 @@ public class AddProductServlet extends HttpServlet {
 		
 		resp.sendRedirect("DisplayAllServlet");
 	}
+	
+	
 
 }

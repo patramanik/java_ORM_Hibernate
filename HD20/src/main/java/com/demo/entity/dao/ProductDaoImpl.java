@@ -50,16 +50,18 @@ public class ProductDaoImpl implements ProductDao{
 	public void editProduct(Product p) {
 		Transaction t = s.beginTransaction();
 		
-		 Query query = s.createQuery("UPDATE Product p SET p.name=:newName,p.category=:newCategory,p.price=:newPrice,p.quantity=:newQuantity WHERE p.id=:id");
+		s.update(p);
 		
-		query.setParameter("id", p.getId());
-		query.setParameter("newName", p.getName());
-		query.setParameter("newCategory", p.getCategory());
-		query.setParameter("newPrice", p.getPrice());
-		query.setParameter("newQuantity", p.getQuantity());
-		
-		int result = query.executeUpdate();
-		System.out.println("Rows affected: " + result);
+//		 Query query = s.createQuery("UPDATE Product p SET p.name=:newName,p.category=:newCategory,p.price=:newPrice,p.quantity=:newQuantity WHERE p.id=:id");
+//		
+//		query.setParameter("id", p.getId());
+//		query.setParameter("newName", p.getName());
+//		query.setParameter("newCategory", p.getCategory());
+//		query.setParameter("newPrice", p.getPrice());
+//		query.setParameter("newQuantity", p.getQuantity());
+//		
+//		int result = query.executeUpdate();
+		System.out.println("Product Updated");
 	}
 
 	@Override
