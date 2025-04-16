@@ -1,0 +1,52 @@
+package com.demo.entity.servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import com.demo.entity.Product;
+import com.demo.entity.dao.ProductDaoImpl;
+
+
+@WebServlet("/EditProductServlet")
+public class EditProductServlet extends HttpServlet {
+
+	ProductDaoImpl pimpl;
+	
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int id = Integer.parseInt(req.getParameter("id"));
+    	String name = req.getParameter("name");
+    	String category = req.getParameter("category");
+    	System.out.println(category);
+    	int price = Integer.parseInt(req.getParameter("price"));
+    	int quantity = Integer.parseInt(req.getParameter("quantity"));
+    	
+    	Product p = new Product();
+    	p.setId(id);
+    	p.setName(name);
+    	p.setCategory(category);
+    	p.setPrice(price);
+    	p.setQuantity(quantity);
+    	
+    	
+    	pimpl = new ProductDaoImpl();
+    	
+    	pimpl.editProduct(p);
+    	
+    	System.out.println("Product Updated");
+    	resp.sendRedirect("DisplayAllServlet");
+    	
+    	
+    	
+	}
+	
+//	@Override
+//	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		// TODO Auto-generated method stub
+//		doPost(req, resp);
+//	}
+
+}

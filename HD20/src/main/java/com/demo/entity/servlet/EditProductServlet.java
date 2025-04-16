@@ -19,7 +19,8 @@ public class EditProductServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int id = Integer.parseInt(req.getParameter("id"));
     	String name = req.getParameter("name");
-    	String category = req.getParameter("cetegory");
+    	String category = req.getParameter("category");
+    	System.out.println(category);
     	int price = Integer.parseInt(req.getParameter("price"));
     	int quantity = Integer.parseInt(req.getParameter("quantity"));
     	
@@ -29,6 +30,7 @@ public class EditProductServlet extends HttpServlet {
     	p.setCategory(category);
     	p.setPrice(price);
     	p.setQuantity(quantity);
+    	
     	
     	pimpl = new ProductDaoImpl();
     	
@@ -41,10 +43,4 @@ public class EditProductServlet extends HttpServlet {
     	
 	}
 	
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doPost(req, resp);
-	}
-
 }

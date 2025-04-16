@@ -42,7 +42,7 @@ public class ProductDaoImpl implements ProductDao{
 		
 		Query query = s.createQuery("from Product");
 		List<Product> list = query.list();
-		
+		t.commit();
 		return list;
 	}
 
@@ -50,30 +50,37 @@ public class ProductDaoImpl implements ProductDao{
 	public void editProduct(Product p) {
 		Transaction t = s.beginTransaction();
 		
-		s.update(p);
+//		s.update(p);
 		
-//		 Query query = s.createQuery("UPDATE Product p SET p.name=:newName,p.category=:newCategory,p.price=:newPrice,p.quantity=:newQuantity WHERE p.id=:id");
-//		
-//		query.setParameter("id", p.getId());
-//		query.setParameter("newName", p.getName());
-//		query.setParameter("newCategory", p.getCategory());
-//		query.setParameter("newPrice", p.getPrice());
-//		query.setParameter("newQuantity", p.getQuantity());
-//		
-//		int result = query.executeUpdate();
-		System.out.println("Product Updated");
+		 Query query = s.createQuery("UPDATE Product p SET p.name=:newName,p.category=:newCategory,p.price=:newPrice,p.quantity=:newQuantity WHERE p.id=:id");
+		
+		query.setInteger("id", p.getId());
+		query.setParameter("newName", p.getName());
+		query.setParameter("newCategory", p.getCategory());
+		System.out.println(p.getCategory());
+		query.setInteger("newPrice", p.getPrice());
+		query.setInteger("newQuantity", p.getQuantity());
+		
+		int result = query.executeUpdate();
+		
+		System.out.println("Product Updated"+result);
+		t.commit();
+		s.close();
 	}
 
 	@Override
 	public void deleteProduct(int id) {
 		Transaction t = s.beginTransaction();
 		
-		Query query = s.createQuery("DELETE FROM Product p WHERE p.id =:id");
+		Query query = s.createQuery("delete from Product  WHERE id =:p_id");
+//		Query query = session.createQuery("delete from Student where rollno=:r");
+        query.setInteger("p_id", id);
 		
-		query.setParameter("id", id);
-		
+//		query.setParameter("id", id);
+//		
 		int result = query.executeUpdate();
 		System.out.println("Rows affected: " + result);
+		t.commit();
 		
 	}
 

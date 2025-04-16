@@ -9,6 +9,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
+
 <div class="container mt-5">
     <div class="card shadow-sm" style="max-width: 500px; margin: 0 auto;">
         <div class="card-header bg-primary text-white">
@@ -26,7 +27,7 @@
         	System.out.println("Edit product jsp");
         %>
         
-            <form action="EditProductServlet" method="get">
+            <form action="EditProductServlet" method="post">
             	<input type="hidden" name="id" value="<%=id %>">
             
                 <div class="mb-3">
