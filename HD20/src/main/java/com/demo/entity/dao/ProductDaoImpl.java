@@ -57,7 +57,7 @@ public class ProductDaoImpl implements ProductDao{
 		query.setInteger("id", p.getId());
 		query.setParameter("newName", p.getName());
 		query.setParameter("newCategory", p.getCategory());
-		System.out.println(p.getCategory());
+//		System.out.println(p.getCategory());
 		query.setInteger("newPrice", p.getPrice());
 		query.setInteger("newQuantity", p.getQuantity());
 		
@@ -70,14 +70,12 @@ public class ProductDaoImpl implements ProductDao{
 
 	@Override
 	public void deleteProduct(int id) {
+		
 		Transaction t = s.beginTransaction();
 		
 		Query query = s.createQuery("delete from Product  WHERE id =:p_id");
-//		Query query = session.createQuery("delete from Student where rollno=:r");
         query.setInteger("p_id", id);
-		
-//		query.setParameter("id", id);
-//		
+				
 		int result = query.executeUpdate();
 		System.out.println("Rows affected: " + result);
 		t.commit();
