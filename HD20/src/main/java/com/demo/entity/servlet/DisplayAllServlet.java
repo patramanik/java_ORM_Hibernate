@@ -16,7 +16,7 @@ import com.demo.entity.dao.ProductDaoImpl;
 @WebServlet("/DisplayAllServlet")
 public class DisplayAllServlet extends HttpServlet {
 	
-	ProductDaoImpl pimpl;
+	private ProductDaoImpl pimpl;
 	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

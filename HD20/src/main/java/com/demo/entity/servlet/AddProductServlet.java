@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/AddProductServlet")
 public class AddProductServlet extends HttpServlet {
 	
-	ProductDaoImpl pimpl;
+	private ProductDaoImpl pimpl;
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	 

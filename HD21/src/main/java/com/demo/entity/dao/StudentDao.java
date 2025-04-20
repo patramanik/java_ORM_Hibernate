@@ -9,7 +9,11 @@ public interface StudentDao {
 
 	public void insertStudent(Student s,Course c);
 	
+	public void updateStudent(Student s,Course c);
+	
 	public List<Course> displayAllCourses();
 	
 	public List<Student> displayAllStudent();
+	
+	public void deleteStudent(int rollno, int cid);
 }

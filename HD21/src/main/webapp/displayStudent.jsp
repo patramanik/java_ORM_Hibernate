@@ -59,14 +59,14 @@
                         <% 
                         List<Student> list = (List<Student>)request.getAttribute("StudentList");
                         for(Student s : list){
+                        Course course = s.getCourse();
                         %>
                         <tr>
                             <td><%= s.getRollNO() %></td>
                             <td><%= s.getName() %></td>
                             <td><%= s.getEmail() %></td>
 							<td>
-								<% 
-		                        Course course = s.getCourse();
+								<%
 		                        if(course != null) {
 		                            out.print(course.getName());
 		                        } else {
@@ -76,10 +76,10 @@
 							</td>
                             <td>
                                 <div class="btn-group" role="group">
-                                    <a href="editStudent.jsp?id=<%=s.getRollNO() %>&name=<%=s.getName()%>" class="btn btn-sm btn-primary mx-1">
+                                    <a href="editStudent.jsp?id=<%=s.getRollNO() %>&name=<%=s.getName()%>&email=<%=s.getEmail()%>&course=<%=course.getName()%>&cid=<%=course.getId()%>" class="btn btn-sm btn-primary mx-1">
                                         <i class="bi bi-pencil"></i> Edit
                                     </a>
-                                    <a href="DeleteCourseServlet?id=<%=s.getRollNO() %>" class="btn btn-sm btn-danger mx-1" onclick="return confirm('Are you sure you want to delete this user?');">
+                                    <a href="DeleteStudentServlet?rollno=<%=s.getRollNO()%>&cid=<%=course.getId()%>" class="btn btn-sm btn-danger mx-1" onclick="return confirm('Are you sure you want to delete this user?');">
                                         <i class="bi bi-trash"></i> Delete
                                     </a>
                                 </div>
@@ -94,7 +94,7 @@
         </div>
     </div>
 </div>
-    </main>
+</main>
 
     <!-- Fixed Footer -->
 	<%@ include file="footer.jsp" %>

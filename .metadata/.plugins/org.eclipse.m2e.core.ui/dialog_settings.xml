@@ -31,14 +31,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.demo.test"/>
 			<item value="com.demo.store"/>
+			<item value="com.demo.test"/>
 		</list>
 		<list key="groupId">
-			<item value="com.demo.test"/>
 			<item value="com.demo.store"/>
+			<item value="com.demo.test"/>
 		</list>
 		<list key="artifactId">
+			<item value="ShopCart"/>
 			<item value="HD21"/>
 			<item value="HD20"/>
 			<item value="HD19"/>

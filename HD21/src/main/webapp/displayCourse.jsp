@@ -29,53 +29,48 @@
     <!-- Navbar -->
     <%@ include file="navebar.jsp" %>
     
+    
+    
     <!--main-content  -->
-    <main class="main-content">
-       <div class="container mt-5">
-    <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-            <h2 class="mb-0">Product List</h2>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-striped table-hover table-bordered">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% 
-                        List<Course> list = (List<Course>)request.getAttribute("courseList");
-                        for(Course c : list){
-                        %>
-                        <tr>
-                            <td><%= c.getId() %></td>
-                            <td><%= c.getName() %></td>
-                            <td>
-                                <div class="btn-group" role="group">
-                                    <a href="editCourse.jsp?id=<%=c.getId() %>&name=<%=c.getName()%>" class="btn btn-sm btn-primary mx-1">
-                                        <i class="bi bi-pencil"></i> Edit
-                                    </a>
-                                    <a href="DeleteCourseServlet?id=<%=c.getId() %>" class="btn btn-sm btn-danger mx-1" onclick="return confirm('Are you sure you want to delete this user?');">
-                                        <i class="bi bi-trash"></i> Delete
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <% 
-                        }
-                        %>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-    </main>
-
+	<main class="main-content">
+	    <div class="container mt-5">
+	        <div class="row justify-content-center"> <!-- Added justify-content-center row -->
+	            <div class="col-12 col-md-8 col-lg-6"> <!-- Responsive column sizing -->
+	                <div class="card shadow-sm">
+	                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+	                        <h2 class="mb-0">Course List</h2>
+	                    </div>
+	                    <div class="card-body p-0"> <!-- Remove card body padding -->
+	                        <div class="table-responsive">
+	                            <table class="table table-striped table-hover table-bordered m-0">
+	                                <thead class="thead-dark">
+	                                    <tr class="text-center"> <!-- Center header content -->
+	                                        <th class="w-25">ID</th> <!-- Width control -->
+	                                        <th class="w-75">Name</th>
+	                                    </tr>
+	                                </thead>
+	                                <tbody>
+	                                    <% 
+	                                    List<Course> list = (List<Course>)request.getAttribute("courseList");
+	                                    for(Course c : list){
+	                                    %>
+	                                    <tr>
+	                                        <td class="text-center"><%= c.getId() %></td>
+	                                        <td class="text-center"><%= c.getName() %></td>
+	                                    </tr>
+	                                    <% 
+	                                    }
+	                                    %>
+	                                </tbody>
+	                            </table>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</main>
+    
     <!-- Fixed Footer -->
 	<%@ include file="footer.jsp" %>
 

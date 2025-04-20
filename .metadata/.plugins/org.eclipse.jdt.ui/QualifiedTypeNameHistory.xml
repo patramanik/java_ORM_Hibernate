@@ -26,7 +26,6 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.demo.entity.dao.ProductDao"/>
     <fullyQualifiedTypeName name="com.demo.entity.dao.ProductDaoImpl"/>
     <fullyQualifiedTypeName name="com.demo.entity.Product"/>
@@ -52,12 +51,13 @@
     <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
     <fullyQualifiedTypeName name="org.hibernate.Session"/>
     <fullyQualifiedTypeName name="javax.persistence.Column"/>
-    <fullyQualifiedTypeName name="com.demo.entity.Student"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.demo.entity.Course"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
-    <fullyQualifiedTypeName name="com.demo.entity.dao.StudentDaoImpl"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.demo.entity.Course"/>
+    <fullyQualifiedTypeName name="com.demo.entity.Student"/>
+    <fullyQualifiedTypeName name="com.demo.entity.dao.StudentDaoImpl"/>
 </qualifiedTypeNameHistroy>

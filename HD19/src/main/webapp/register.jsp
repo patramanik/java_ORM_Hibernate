@@ -12,8 +12,8 @@
 </head>
 <body>
 	
-	<%@ page import="com.demo.entity.User" %>
-	<jsp:useBean id="u1" class="com.demo.entity.User"></jsp:useBean>
+	<%@ page import="com.demo.entity.Users" %>
+	<jsp:useBean id="" class="w"></jsp:useBean>
 	<jsp:setProperty property="*" name="u1"/>
 	
 	<%

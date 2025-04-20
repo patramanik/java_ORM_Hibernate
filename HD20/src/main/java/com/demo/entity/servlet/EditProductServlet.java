@@ -14,7 +14,7 @@ import com.demo.entity.dao.ProductDaoImpl;
 @WebServlet("/EditProductServlet")
 public class EditProductServlet extends HttpServlet {
 
-	ProductDaoImpl pimpl;
+	private ProductDaoImpl pimpl;
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int id = Integer.parseInt(req.getParameter("id"));

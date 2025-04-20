@@ -13,7 +13,7 @@ import com.demo.entity.dao.ProductDaoImpl;
 @WebServlet("/DeleteProductServlet")
 public class DeleteProductServlet extends HttpServlet {
 	
-	ProductDaoImpl pimpl;
+	private ProductDaoImpl pimpl;
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		

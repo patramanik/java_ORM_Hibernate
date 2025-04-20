@@ -14,7 +14,7 @@ import com.demo.entity.Student;
 
 public class StudentDaoImpl implements StudentDao{
 	
-	Session sess;
+ 	private Session sess;
 
 	public StudentDaoImpl() {
 		Configuration cfg = new Configuration();
@@ -60,7 +60,44 @@ public class StudentDaoImpl implements StudentDao{
 		
 		return list;
 	}
+
+	@Override
+	public void updateStudent(Student s, Course c) {
+		
+		Transaction t = sess.beginTransaction();
+
+		System.out.println(s);
+		System.out.println(c);
+		
+		sess.update(c);
+		sess.update(s);
+		
+		t.commit();
+		
+	}
 	
+	@Override
+	public void deleteStudent(int rollno, int cid) {
+		
+	    Transaction t = sess.beginTransaction();
+	        
+			System.out.println("Student rollNo is: "+rollno);
+			System.out.println("Course id is: "+cid);
+	        
+	        Student student = (Student) sess.get(Student.class, rollno);
+	        Course course = (Course) sess.get(Course.class, cid);
+	        
+	        if (student != null) {
+	            sess.delete(student);
+	        }
+	        if (course != null) {
+	            sess.delete(course);
+	        }
+	        
+	        t.commit();
+	    
+	}
+
 	
 
 }
