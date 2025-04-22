@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\javaORM\HD21"/>
 			<item value="D:\javaORM\HD20"/>
 			<item value="D:\javaORM\HD14\src\main\java\hibernate.cfg.xml"/>
 			<item value="D:\javaORM\HD5\src\main\java\com\demo\test\App.java"/>
@@ -31,19 +32,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.demo.store"/>
-			<item value="com.demo.test"/>
 		</list>
 		<list key="groupId">
-			<item value="com.demo.store"/>
-			<item value="com.demo.test"/>
 		</list>
 		<list key="artifactId">
-			<item value="ShopCart"/>
-			<item value="HD21"/>
-			<item value="HD20"/>
-			<item value="HD19"/>
-			<item value="eStore"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
